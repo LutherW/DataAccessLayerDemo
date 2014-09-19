@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A139BCB9-61AE-485B-9CB0-F28C864E7E53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccessLayerDemo.Services</RootNamespace>
+    <AssemblyName>DataAccessLayerDemo.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LibraryService.cs" />
+    <Compile Include="Mappers\BookExtensionMethods.cs" />
+    <Compile Include="Mappers\BookTitleExtensionMethods.cs" />
+    <Compile Include="Mappers\LoanExtensionMethods.cs" />
+    <Compile Include="Mappers\MemberExtensionMethods.cs" />
+    <Compile Include="Messages\AddBookRequest.cs" />
+    <Compile Include="Messages\AddBookResponse.cs" />
+    <Compile Include="Messages\AddBookTitleRequest.cs" />
+    <Compile Include="Messages\AddBookTitleResponse.cs" />
+    <Compile Include="Messages\AddMemberRequest.cs" />
+    <Compile Include="Messages\FindBooksRequest.cs" />
+    <Compile Include="Messages\FindBooksResponse.cs" />
+    <Compile Include="Messages\FindBookTitlesRequest.cs" />
+    <Compile Include="Messages\FindBookTitlesResponse.cs" />
+    <Compile Include="Messages\FindMemberRequest.cs" />
+    <Compile Include="Messages\FindMemberResponse.cs" />
+    <Compile Include="Messages\LoanBookRequest.cs" />
+    <Compile Include="Messages\LoanBookResponse.cs" />
+    <Compile Include="Messages\ResponseBase.cs" />
+    <Compile Include="Messages\AddMemberResponse.cs" />
+    <Compile Include="Messages\ReturnBookRequest.cs" />
+    <Compile Include="Messages\ReturnBookResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BookTitleView.cs" />
+    <Compile Include="ViewModels\BookView.cs" />
+    <Compile Include="ViewModels\LoanView.cs" />
+    <Compile Include="ViewModels\MemberView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayerDemo.Infrastructure\DataAccessLayerDemo.Infrastructure.csproj">
+      <Project>{02318225-7caa-49c9-99ed-f6cbec5333ab}</Project>
+      <Name>DataAccessLayerDemo.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayerDemo.Model\DataAccessLayerDemo.Model.csproj">
+      <Project>{97a232a9-34f1-4f50-a18a-e2d944b81ea0}</Project>
+      <Name>DataAccessLayerDemo.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

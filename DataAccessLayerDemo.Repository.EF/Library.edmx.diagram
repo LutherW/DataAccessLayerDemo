@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e6b247f26d9943e09676fafb3f1579a2" Name="关系图1">
+        <EntityTypeShape EntityType="DataAccessLayerDemo.Model.BookTitle" Width="1.5" PointX="3.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAccessLayerDemo.Model.Book" Width="1.5" PointX="2.375" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAccessLayerDemo.Model.Loan" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataAccessLayerDemo.Model.Member" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DataAccessLayerDemo.Model.FK_t_Copies_t_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="DataAccessLayerDemo.Model.FK_Loans_Copies" ManuallyRouted="false" />
+        <AssociationConnector Association="DataAccessLayerDemo.Model.FK_t_Copies_t_Members" ManuallyRouted="false" />
+        <AssociationConnector Association="DataAccessLayerDemo.Model.FK_Loans_Members" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

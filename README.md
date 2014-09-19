@@ -1,0 +1,2 @@
+ASP.NET数据访问层DEMO
+包括EntityFramework,NHibernate的实现方式
